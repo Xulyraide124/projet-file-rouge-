@@ -1,0 +1,40 @@
+services:
+  navidrome:
+    image: deluan/navidrome:latest
+    restart: always
+    ports:
+      - "4533:4533"
+    environment:
+      ND_SCANSCHEDULE: 1h
+      ND_LOGLEVEL: info
+    volumes:
+      - ./navidrome_data:/data
+      - musique_remote:/music:ro
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    restart: always
+    ports:
+      - "8096:8096"
+    healthcheck:
+      test: ["CMD", "curl", "-s", "http://localhost:8096/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 120s
+    volumes:
+      - ./jellyfin_config:/config
+      - musique_remote:/data/music:ro
+      - films_remote:/data/movies:ro
+volumes:
+  musique_remote:
+    driver: local
+    driver_opts:
+      type: nfs
+      o: "addr=192.168.177.6,nolock,soft,rw,retry=3,timeo=30"
+      device: ":/home/film/musique"
+  films_remote:
+    driver: local
+    driver_opts:
+      type: nfs
+      o: "addr=192.168.177.6,nolock,soft,rw,retry=3,timeo=30"
+      device: ":/home/film/films"
