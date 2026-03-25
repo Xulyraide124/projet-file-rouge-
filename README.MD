@@ -1,7 +1,7 @@
 # Documentation Technique — Infrastructure Média (JEL / FILM)
 
-**Date :** 2026-03-26  
-**Rédigé par :** [Ton nom]  
+**Date :** 2026-03-25  
+**Rédigé par :** Ulysse Prevost Lacaze
 **Projet :** Serveur de téléchargement et stockage NFS pour films et musique
 
 ---
