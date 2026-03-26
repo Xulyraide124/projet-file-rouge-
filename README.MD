@@ -26,7 +26,7 @@
 | VM | Rôle | IP |
 |----|------|----|
 | `jel` | Serveur principal (téléchargement, Docker) | 192.168.177.5 |
-| `film` | Serveur de stockage (NFS) | *(IP locale)* |
+| `film` | Serveur de stockage (NFS) | 192.168.177.6 |
 
 Les répertoires `/home/film/films` et `/home/film/musique` sur `film` sont exportés via NFS et montés sur `jel`.
 
