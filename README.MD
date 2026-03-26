@@ -238,10 +238,10 @@ touch monitor_vm.sh         # Monitoring des VM
 
 | Outil | Version |
 |-------|---------|
-| Ubuntu Server | *(à préciser)* |
+| Ubuntu Server | 24.04 LTS |
 | Node.js | 18.19.1 |
 | FFmpeg | 6.1.1-3ubuntu5 |
 | yt-dlp | *(version après `yt-dlp -U`)* |
-| Docker Compose | *(à préciser)* |
+| Docker Compose | v5.1.0. |
 
 ---
