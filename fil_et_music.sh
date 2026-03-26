@@ -37,7 +37,7 @@ case $choix in
     N)
         exit
         ;;
-    # comme les gen son un peut teubé voici la 4 eme option qui dit  CHOISIE 1 OU 2
+    # voici la 4 eme option qui dit  CHOISIE 1 OU 2
  *)
         echo "Choix non valide. tu doit choisir le 1 ou le 2."
         ;;
